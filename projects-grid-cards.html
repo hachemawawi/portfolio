@@ -42,87 +42,154 @@
             <section class="portfolio-block projects-cards">
                 <div class="container">
                     <div class="heading">
-                        <h2>Recent Shots</h2>
+                        <h2>Recent Projects</h2>
+                        <!-- Filter Option Start -->
+                        <div class="mb-4 text-center">
+                            <label for="projectFilter" class="form-label fw-bold me-2">Filter by Category:</label>
+                            <select id="projectFilter" class="form-select d-inline-block w-auto" onchange="filterProjects()">
+                                <option value="all">All</option>
+                                <option value="threejs">three.js</option>
+                                <option value="markerless">Markerless AR</option>
+                                <option value="markerbased">Marker-based AR</option>
+                            </select>
+                        </div>
+                        <!-- Filter Option End -->
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0">
-                                <a href="#">
-                                    <img class="card-img-top scale-on-hover" src="assets/img/nature/image1.jpg" alt="Card Image">
+                        <!-- Sphere - 3D Landing Page -->
+                        <div class="col-12 col-md-4 mb-4 project-col" data-category="threejs">
+                            <div class="card border-0 mb-4">
+                                <a href="https://your-webar-app-url.com" target="_blank">
+                                    <img class="card-img-top scale-on-hover" src="assets/gifs/sphere.gif" alt="Project GIF">
                                 </a>
                                 <div class="card-body">
-                                    <h6>
-                                        <a href="#">Island Mountain</a>
-                                    </h6>
-                                    <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h5 class="card-title">Sphere - 3D Landing Page</h5>
+                                    <p class="text-muted card-text">
+                                        Interactive 3D sphere rendered in Three.js, Users can view and manipulate the sphere.
+                                    </p>
+                                    <p>
+                                        <strong>Stack:</strong>
+                                        Three.js, JavaScript, HTML, CSS
+                                    </p>
+                                    <a href="https://github.com/hachemawawi/3d-sphere-landingpage" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0">
-                                <a href="#">
-                                    <img class="card-img-top scale-on-hover" src="assets/img/nature/image2.jpg" alt="Card Image">
+                        <!-- Malaysia Explorer -->
+                        <div class="col-12 col-md-4 mb-4 project-col" data-category="threejs">
+                            <div class="card border-0 mb-4">
+                                <a href="https://your-webar-app-url.com/project2" target="_blank">
+                                    <img class="card-img-top scale-on-hover" src="assets/gifs/vrClass.gif" alt="Project GIF">
                                 </a>
                                 <div class="card-body">
-                                    <h6>
-                                        <a href="#">Malaysia</a>
-                                    </h6>
-                                    <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h5 class="card-title">Virtual Classroom</h5>
+                                    <p class="text-muted card-text">
+                                        Explore virtual classroom walkthrough, future of teaching.
+                                    </p>
+                                    <p>
+                                        <strong>Stack:</strong>
+                                        Next.js, R3F, tailwind CSS
+                                    </p>
+                                    <a href="https://github.com/hachemawawi/vrclass-ai-teacher" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0">
-                                <a href="#">
-                                    <img class="card-img-top scale-on-hover" src="assets/img/nature/image3.jpg" alt="Card Image">
+                       
+                        <!-- Germany AR Tour -->
+                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerless">
+                            <div class="card border-0 mb-4">
+                                <a href="https://h-hitt.glitch.me/" target="_blank">
+                                    <img class="card-img-top scale-on-hover" src="assets/gifs/Markerless-AR.gif" alt="Project GIF">
                                 </a>
                                 <div class="card-body">
-                                    <h6>
-                                        <a href="#">Germany</a>
-                                    </h6>
-                                    <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h5 class="card-title">World Tracking AR</h5>
+                                    <p class="text-muted card-text">
+                                        Placing 3D Gaming chair in real-world locations using A-frame.js framework Three.js and WebXR api for world tracking.
+                                        compatible with all platforms (Android, iOS, Web).
+                                    </p>
+                                    <p>
+                                        <strong>Stack:</strong>
+                                        A-frame, Three.js, WebXR Api
+                                    </p>
+                                    <a href="https://h-hitt.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0">
-                                <a href="#">
-                                    <img class="card-img-top scale-on-hover" src="assets/img/nature/image4.jpg" alt="Card Image">
-                                </a>
+                         <!-- AR Business Card -->
+                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
+                            <div class="card border-0 mb-4">
+                                <iframe
+                                    src="https://www.youtube.com/embed/Ufx6JM2NE4w?si=43wZaacLCgZDJHyz"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen
+                                ></iframe>
                                 <div class="card-body">
-                                    <h6>
-                                        <a href="#">Ocean</a>
-                                    </h6>
-                                    <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h5 class="card-title">Business Card WebAR </h5>
+                                    <p class="text-muted card-text">
+                                        Ar Business Card with 3D talking, reacting and speaking Avatar(Customized), users can view and interact with the model in AR.
+                                    </p>
+                                    <p>
+                                        <strong>Stack:</strong>
+                                        Three.js, AR.js, A-frame, Blender
+                                    </p>
+                                    <a href="https://oneplus-bc.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0">
-                                <a href="#">
-                                    <img class="card-img-top scale-on-hover" src="assets/img/nature/image5.jpg" alt="Card Image">
-                                </a>
+                        <!-- Saudi National Day (Face Filter) -->
+                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
+                            <div class="card border-0 mb-4">
+                                <iframe
+                                    src="https://www.youtube.com/embed/ZOswetGYt7I?si=8w6Af3flSZPrXZ-U"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen
+                                ></iframe>
+                    
                                 <div class="card-body">
-                                    <h6>
-                                        <a href="#">Landscape</a>
-                                    </h6>
-                                    <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h5 class="card-title">Saudi National Day (Face Filter)</h5>
+                                    <p class="text-muted card-text">
+                                        Saudi National Day face filter with capture and record feature.
+                                        Compatible with All Platforms (Android, iOS, Web).
+                                    </p>
+                                    <p>
+                                        <strong>Stack:</strong>
+                                        Three.js, MindAR.js, Tensorflow.js
+                                    </p>
+                                    <a href="https://fullmask.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card border-0">
-                                <a href="#">
-                                    <img class="card-img-top scale-on-hover" src="assets/img/nature/image6.jpg" alt="Card Image">
-                                </a>
+                        <!-- Clone AR -->
+                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
+                            <div class="card border-0 mb-4">
+                               <iframe
+                                    src="https://www.youtube.com/embed/dCo52lJyF2Q?si=-Ih7KgrIAB9whSWC"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen
+                                ></iframe>
                                 <div class="card-body">
-                                    <h6>
-                                        <a href="#">City</a>
-                                    </h6>
-                                    <p class="text-muted card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.</p>
+                                    <h5 class="card-title">Avatar Clone shooting Fire WebAR </h5>
+                                    <p class="text-muted card-text">
+                                        Ar Avatar Clone shooting Fire, users can view and interact with the model in AR.
+                                    </p>
+                                    <p>
+                                        <strong>Stack:</strong>
+                                        three.js, A-frame.js, JavaScript
+                                    </p>
+                                    <a href="https://h-clone.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </section>
@@ -149,5 +216,17 @@
         </footer>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/script.min.js"></script>
+        <script>
+function filterProjects() {
+    const value = document.getElementById('projectFilter').value;
+    document.querySelectorAll('.project-col').forEach(col => {
+        if (value === 'all' || col.getAttribute('data-category') === value) {
+            col.style.display = '';
+        } else {
+            col.style.display = 'none';
+        }
+    });
+}
+        </script>
     </body>
 </html>

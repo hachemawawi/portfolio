@@ -3,8 +3,21 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Portfolio</title>
-        <link rel="icon" type="image/x-icon" href="C:\Users\MSI\Documents\Bootstrap projects\assets\img\ha.png">
+        <title>WebAR Projects | Hachem Awawi</title>
+        <meta name="description" content="Browse recent WebAR and immersive 3D projects by Hachem Awawi, including Three.js, AR.js, and MindAR.js experiences.">
+        <meta name="keywords" content="WebAR, Augmented Reality, Three.js, MindAR.js, AR.js, Hachem Awawi portfolio">
+        <meta name="author" content="Hachem Awawi">
+        <link rel="canonical" href="https://hachemawawi.me/projects">
+        <meta property="og:title" content="WebAR Projects | Hachem Awawi">
+        <meta property="og:description" content="Explore interactive WebAR demos, virtual try-on, and AR business cards built with modern web technologies.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://hachemawawi.me/projects">
+        <meta property="og:image" content="https://hachemawawi.me/assets/img/ha.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="WebAR Projects | Hachem Awawi">
+        <meta name="twitter:description" content="Discover immersive WebAR experiences and 3D interactions crafted by Hachem Awawi.">
+        <meta name="twitter:image" content="https://hachemawawi.me/assets/img/ha.png">
+        <link rel="icon" type="image/png" href="assets/img/ha.png">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
         <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -46,7 +59,7 @@
                         <!-- Filter Option Start -->
                         <div class="mb-4 text-center">
                             <label for="projectFilter" class="form-label fw-bold me-2">Filter by Category:</label>
-                            <select id="projectFilter" class="form-select d-inline-block w-auto" onchange="filterProjects()">
+                            <select id="projectFilter" class="form-select d-inline-block w-auto" aria-label="Filter projects by category">
                                 <option value="all">All</option>
                                 <option value="threejs">three.js</option>
                                 <option value="markerless">Markerless AR</option>
@@ -55,159 +68,7 @@
                         </div>
                         <!-- Filter Option End -->
                     </div>
-                    <div class="row">
-                        <!-- Sphere - 3D Landing Page -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="threejs">
-                            <div class="card border-0 mb-4">
-                                <a href="https://your-webar-app-url.com" target="_blank">
-                                    <img class="card-img-top scale-on-hover" src="assets/gifs/sphere.gif" alt="Project GIF">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Sphere - 3D Landing Page</h5>
-                                    <p class="text-muted card-text">
-                                        Interactive 3D sphere rendered in Three.js, Users can view and manipulate the sphere.
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        Three.js, JavaScript, HTML, CSS
-                                    </p>
-                                    <a href="https://github.com/hachemawawi/3d-sphere-landingpage" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Virtual Try-On -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
-                            <div class="card border-0 mb-4">
-                                <a href="https://hachemawawi.me/Virtual-Try-On/" target="_blank">
-                                    <img class="card-img-top scale-on-hover" src="assets/gifs/tryOn.gif" alt="Project GIF">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Virtual Try-On</h5>
-                                    <p class="text-muted card-text">
-                                        Virtual Try-On application that allows users to try on clothes virtually using Three.js and MindAR Framework.
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        Three.js, MindAr.js, Tensorflow.js
-                                    </p>
-                                    <a href="https://github.com/hachemawawi/Virtual-Try-On" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
-                                    <a href="https://hachemawawi.me/Virtual-Try-On/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Virtual Classroom -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="threejs">
-                            <div class="card border-0 mb-4">
-                                <a href="https://your-webar-app-url.com/project2" target="_blank">
-                                    <img class="card-img-top scale-on-hover" src="assets/gifs/vrClass.gif" alt="Project GIF">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Virtual Classroom</h5>
-                                    <p class="text-muted card-text">
-                                        Explore virtual classroom walkthrough, future of teaching.
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        Next.js, R3F, Tailwind CSS
-                                    </p>
-                                    <a href="https://github.com/hachemawawi/vrclass-ai-teacher" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- World Tracking AR -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerless">
-                            <div class="card border-0 mb-4">
-                                <a href="https://h-hitt.glitch.me/" target="_blank">
-                                    <img width="100px" height="200px"class="card-img-top scale-on-hover" src="assets/gifs/placeFurniture.gif" alt="Project GIF">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Place The Gaming Chair</h5>
-                                    <p class="text-muted card-text">
-                                        Placing 3D Gaming chair in real-world locations using A-frame.js framework Three.js and WebXR api for world tracking.
-                                        compatible with all platforms (Android, iOS, Web) runs on Chrome Browser or Mozilla's WebXR Viewer from App Store.
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        A-Frame, Three.js, WebXR Api
-                                    </p>
-                                    <a href="https://h-hitt.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- AR Business Card -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
-                            <div class="card border-0 mb-4">
-                                <iframe
-                                    src="https://www.youtube.com/embed/Ufx6JM2NE4w?si=43wZaacLCgZDJHyz"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allowfullscreen
-                                ></iframe>
-                                <div class="card-body">
-                                    <h5 class="card-title">Business Card WebAR</h5>
-                                    <p class="text-muted card-text">
-                                        Ar Business Card with 3D talking, reacting and speaking Avatar(Customized), users can view and interact with the model in AR.
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        Three.js, AR.js, A-Frame, Blender
-                                    </p>
-                                    <a href="https://oneplus-bc.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Saudi National Day (Face Filter) -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
-                            <div class="card border-0 mb-4">
-                                <iframe
-                                    src="https://www.youtube.com/embed/ZOswetGYt7I?si=8w6Af3flSZPrXZ-U"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allowfullscreen
-                                ></iframe>
-                                <div class="card-body">
-                                    <h5 class="card-title">Saudi National Day (Face Filter)</h5>
-                                    <p class="text-muted card-text">
-                                        Saudi National Day face filter with capture and record feature.
-                                        Compatible with All Platforms (Android, iOS, Web).
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        Three.js, MindAR.js, Tensorflow.js
-                                    </p>
-                                    <a href="https://fullmask.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Clone AR -->
-                        <div class="col-12 col-md-4 mb-4 project-col" data-category="markerbased">
-                            <div class="card border-0 mb-4">
-                                <iframe
-                                    src="https://www.youtube.com/embed/dCo52lJyF2Q?si=-Ih7KgrIAB9whSWC"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allowfullscreen
-                                ></iframe>
-                                <div class="card-body">
-                                    <h5 class="card-title">Avatar Clone shooting Fire WebAR</h5>
-                                    <p class="text-muted card-text">
-                                        Ar Avatar Clone shooting Fire, users can view and interact with the model in AR.
-                                    </p>
-                                    <p>
-                                        <strong>Stack:</strong>
-                                        Three.js, A-Frame.js, JavaScript, AR.js, Blender
-                                    </p>
-                                    <a href="https://h-clone.glitch.me/" target="_blank" class="btn btn-outline-success btn-sm ms-2">Try WebAR</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="row g-4" id="projectsGrid" aria-live="polite"></div>
                 </div>
             </section>
         </main>
@@ -233,17 +94,6 @@
         </footer>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/script.min.js"></script>
-        <script>
-function filterProjects() {
-    const value = document.getElementById('projectFilter').value;
-    document.querySelectorAll('.project-col').forEach(col => {
-        if (value === 'all' || col.getAttribute('data-category') === value) {
-            col.style.display = '';
-        } else {
-            col.style.display = 'none';
-        }
-    });
-}
-        </script>
+        <script type="module" src="assets/js/projects.js"></script>
     </body>
 </html>

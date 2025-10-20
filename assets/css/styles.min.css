@@ -222,6 +222,7 @@
     border-top-left-radius: .75rem;
     border-top-right-radius: .75rem;
     background-color: #111;
+    overflow: hidden;
 }
 
 .project-card-media img,
@@ -229,6 +230,7 @@
     width: 100%;
     height: 100%;
     display: block;
+    border: 0;
 }
 
 .project-card-image {
@@ -272,4 +274,196 @@
 .pika-table abbr {
     border-bottom: none;
     cursor: help
+}
+
+/* Avatar Viewer Styles */
+.avatar-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    margin: 0 auto 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+    will-change: transform;
+}
+
+.avatar-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    touch-action: none;
+}
+
+.avatar-controls {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: rgba(255, 255, 255, .95);
+    padding: 1rem 1.5rem;
+    border-radius: .75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+    will-change: opacity;
+}
+
+.animation-label {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #495057;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.animation-select {
+    min-width: 200px;
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    border-radius: .375rem;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.animation-select:hover,
+.animation-select:focus {
+    border-color: #0d6efd;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+#toggleAnimationBtn {
+    white-space: nowrap;
+    transition: all .2s ease;
+    font-size: .875rem;
+}
+
+#toggleAnimationBtn:hover {
+    transform: scale(1.05);
+}
+
+#toggleAnimationBtn:active {
+    transform: scale(.95);
+}
+
+.avatar-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .avatar-container {
+        height: 400px;
+    }
+
+    .avatar-controls {
+        flex-direction: column;
+        gap: .75rem;
+        padding: .75rem 1rem;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        transform: none;
+        width: auto;
+    }
+
+    .animation-select {
+        min-width: 150px;
+    }
+
+    .animation-label {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar-container {
+        height: 300px;
+    }
+
+    .avatar-controls {
+        gap: .5rem;
+        padding: .5rem;
+        bottom: .5rem;
+        left: .5rem;
+        right: .5rem;
+    }
+
+    .animation-select {
+        min-width: 120px;
+        font-size: .8rem;
+    }
+
+    #toggleAnimationBtn {
+        padding: .375rem .5rem !important;
+        font-size: .75rem;
+    }
+}
+
+/* GPU Acceleration */
+.avatar-canvas,
+.avatar-controls {
+    will-change: auto;
+    transform: translateZ(0);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .avatar-controls {
+        animation: none;
+        transition: none;
+    }
+
+    #toggleAnimationBtn:hover {
+        transform: none;
+    }
+
+    #toggleAnimationBtn:active {
+        transform: none;
+    }
+
+    .avatar-container {
+        animation: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .avatar-container {
+        background: linear-gradient(135deg, #2d3436 0%, #1e272e 100%);
+    }
+
+    .avatar-controls {
+        background: rgba(45, 52, 54, .95);
+        color: #ecf0f1;
+    }
+
+    .animation-label {
+        color: #bdc3c7;
+    }
+
+    .animation-select {
+        background-color: #34495e;
+        color: #ecf0f1;
+        border-color: #475569;
+    }
+
+    .animation-select:hover,
+    .animation-select:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 0 .25rem rgba(52, 152, 219, .25);
+    }
 }

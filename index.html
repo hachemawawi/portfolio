@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>Portfolio</title>
-        <link rel="icon" type="image/x-icon" href="C:\Users\MSI\Documents\Bootstrap projects\assets\img\ha.png">
+        <link rel="icon" type="image/png" href="assets/img/ha.png">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
         <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -42,6 +42,19 @@
             <section class="portfolio-block block-intro">
                 <div class="container">
                     <div class="avatar" style="background: url(&quot;assets/img/avatars/mypic.png&quot;) center / contain no-repeat, var(--bs-primary);box-shadow: 0px 0px 0px;"></div>
+                   <!--  <div class="avatar-container">
+                        <canvas id="avatarCanvas" class="avatar-canvas"></canvas>
+                        <div class="avatar-controls">
+                            <label for="animationSelect" class="animation-label">Animation:</label>
+                            <select id="animationSelect" class="form-select animation-select" aria-label="Choose avatar animation">
+                                <option value="">-- Select Animation --</option>
+                            </select>
+                            <button id="toggleAnimationBtn" class="btn btn-sm btn-outline-primary" aria-label="Play or pause animation" type="button">
+                                <i class="icon ion-play"></i> Play
+                            </button>
+                        </div>
+                        <div class="avatar-fallback" id="avatarFallback" style="background: url(&quot;assets/img/avatars/mypic.png&quot;) center / contain no-repeat, var(--bs-primary); display: none;"></div>
+                    </div> -->
                     <div class="about-me">
                         <p>
                             Hello! I'm
@@ -235,5 +248,23 @@
         </footer>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/script.min.js"></script>
+        <script type="module">
+            // Load Three.js libraries globally from ES modules using esm.sh CDN
+            // esm.sh has proper CORS headers and supports semantic versioning
+            import * as THREE from 'https://esm.sh/three@0.150.0';
+            import { GLTFLoader } from 'https://esm.sh/three@0.150.0/examples/jsm/loaders/GLTFLoader.js';
+            import { OrbitControls } from 'https://esm.sh/three@0.150.0/examples/jsm/controls/OrbitControls.js';
+
+            window.THREE = THREE;
+            window.GLTFLoader = GLTFLoader;
+            window.OrbitControls = OrbitControls;
+
+            console.log('Three.js libraries loaded successfully');
+            
+            // Now load avatar viewer after libraries are ready
+            const script = document.createElement('script');
+            script.src = 'assets/js/avatar-viewer.js';
+            document.body.appendChild(script);
+        </script>
     </body>
 </html>
